@@ -172,8 +172,6 @@ class VersionConfig
 
         if (empty($values['migration_dir'])) {
             $values['migration_dir'] = Module::getPhpInterfaceDir() . '/migrations';
-        } elseif (empty($values['migration_dir_absolute'])) {
-            $values['migration_dir'] = Module::getDocRoot() . $values['migration_dir'];
         }
 
         if (!is_dir($values['migration_dir'])) {
